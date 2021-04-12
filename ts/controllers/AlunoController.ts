@@ -1,29 +1,30 @@
 class AlunoController{
 
-    private _nome;
-    private _matricula;
-    private _dataNascimento;
-    private _primeiraNota;
-    private _segundaNota;
+    private _nome: HTMLInputElement;
+    private _matricula: HTMLInputElement;
+    private _dataNascimento: HTMLInputElement;
+    private _primeiraNota: HTMLInputElement;
+    private _segundaNota: HTMLInputElement;
 
     constructor() {
-        this._nome = document.querySelector('#nomeid');
-        this._matricula = document.querySelector('#matriculaid');
-        this._dataNascimento = document.querySelector('#dtnascid');
-        this._primeiraNota = document.querySelector('#nota01id');
-        this._segundaNota = document.querySelector('#nota02id');
+        this._nome = <HTMLInputElement>document.querySelector('#nomeid');
+        this._matricula = <HTMLInputElement>document.querySelector('#matriculaid');
+        this._dataNascimento = <HTMLInputElement>document.querySelector('#dtnascid');
+        this._primeiraNota = <HTMLInputElement>document.querySelector('#nota01id');
+        this._segundaNota = <HTMLInputElement>document.querySelector('#nota02id');
     }
 
-    adiciona(event) {
+    adiciona(event: Event) {
         // cancela a execução do evento
         event.preventDefault();
 
         const aluno = new Aluno(
             this._nome.value, 
-            this._matricula.value, 
-            this._dataNascimento.value,
-            this._primeiraNota.value,
-            this._segundaNota.value);
+            parseInt(this._matricula.value), 
+            // por padrão o chrome 2021-04-12
+            new Date(this._dataNascimento.value.replace(/-/g, ',')),
+            parseFloat(this._primeiraNota.value),
+            parseFloat(this._segundaNota.value));
 
         console.log(aluno);
     }

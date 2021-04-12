@@ -29,15 +29,15 @@
             </div>
             <div class="form-group">
                 <label for="dtnascid">Data Nascimento</label>
-                <input type="data" id="dtnascid" class="form-control" placeholder="Informe a data de nascimento do aluno" required>
+                <input type="date" id="dtnascid" class="form-control" placeholder="Informe a data de nascimento do aluno" required>
             </div>
             <div class="form-group">
                 <label for="nota01id">Primeira nota</label>
-                <input type="number" id="nota01id" class="form-control" placeholder="Informe a primeira nota do aluno" required>
+                <input type="number" id="nota01id" min="0.00" max="10.00" step="any" class="form-control" placeholder="Informe a primeira nota do aluno" required>
             </div>
             <div class="form-group">
                 <label for="nota02id">Segunda nota</label>
-                <input type="number" id="nota02id" class="form-control" placeholder="Informe a segunda nota do aluno" required>
+                <input type="number" id="nota02id" min="0.00" max="10.00" step="any" class="form-control" placeholder="Informe a segunda nota do aluno" required>
             </div>
             <button type="submit" class="btn btn-dark btn-lg my-2">Incluir</button>
         </form>
