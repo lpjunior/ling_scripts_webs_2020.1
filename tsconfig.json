@@ -2,11 +2,12 @@
     "compileOnSave": true,
     "compilerOptions": {
         "target": "es6",
-        "outDir": "js",
+        "outDir": "app/js",
         "noEmitOnError": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "removeComments": true
     },
     "include": [
-        "ts/**/*"
+        "app/ts/**/*"
     ]
 }

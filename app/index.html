@@ -44,31 +44,7 @@
         <br>
         <hr>
         <br>
-        <table class="table table-hover table-bordered">
-            <thead>
-                <tr class="text-center">
-                    <th>Nome</th>
-                    <th>Matricula</th>
-                    <th>Data Nasc.</th>
-                    <th>Primeira Nota</th>
-                    <th>Segunda Nota</th>
-                    <th>Média</th>
-                    <th colspan="2">Gerenciar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="text-center">
-                    <td>Fulano</td>
-                    <td>123456</td>
-                    <td>22/03/2021</td>
-                    <td>10.0</td>
-                    <td>6.0</td>
-                    <td>8.0</td>
-                    <td><a href="#"><i class="fas fa-pencil-alt"></i></a></td>
-                    <td><a href="#"><i class="fas fa-trash-alt text-danger"></i></a></td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="tableAlunos"></div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -83,6 +59,8 @@
     -->
 
     <script src="js/models/Aluno.js"></script>
+    <script src="js/models/ListAlunos.js"></script>
+    <script src="js/views/AlunoView.js"></script>
     <script src="js/controllers/AlunoController.js"></script>
     <script src="js/app.js"></script>
   </body>
