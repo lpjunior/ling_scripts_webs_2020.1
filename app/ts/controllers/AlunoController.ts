@@ -1,4 +1,7 @@
-class AlunoController {
+import { Aluno, ListAlunos } from '../models/moduleAluno';
+import { AlunoView, MensagemView } from '../views/moduleView';
+
+export class AlunoController {
 
     private _nome: HTMLInputElement;
     private _matricula: HTMLInputElement;
@@ -6,7 +9,8 @@ class AlunoController {
     private _primeiraNota: HTMLInputElement;
     private _segundaNota: HTMLInputElement;
     private _listAlunos = new ListAlunos();
-    private _alunoView = new AlunoView();
+    private _alunoView = new AlunoView('tableAlunos');
+    private _mensagemView = new MensagemView('messageView');
 
     constructor() {
         this._nome = <HTMLInputElement>document.querySelector('#nomeid');
@@ -15,7 +19,7 @@ class AlunoController {
         this._primeiraNota = <HTMLInputElement>document.querySelector('#nota01id');
         this._segundaNota = <HTMLInputElement>document.querySelector('#nota02id');
 
-        this._alunoView.addTable(this._listAlunos);
+        this._alunoView.update(this._listAlunos);
     }
 
     adiciona(event: Event) {
@@ -35,6 +39,9 @@ class AlunoController {
         this._listAlunos.adiciona(aluno);
 
         // atualiza a lista de alunos
-        this._alunoView.addTable(this._listAlunos);
+        this._alunoView.update(this._listAlunos);
+
+        // adiciona a mensagem de cadastrado
+        this._mensagemView.update('Aluno adicionado com sucesso!');
     }
 }

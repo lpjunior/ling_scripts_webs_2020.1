@@ -1,4 +1,4 @@
-class Aluno {
+export class Aluno {
 
     // declaração das propriedades (atributos) da classe
     // private String _nome; -- Java

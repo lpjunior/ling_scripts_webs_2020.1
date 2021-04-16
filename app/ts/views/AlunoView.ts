@@ -1,14 +1,7 @@
-class AlunoView {
+import { ListAlunos } from '../models/moduleAluno';
+import { View } from './View';
 
-    private _elemento: Element;
-
-    constructor() {
-        this._elemento = document.querySelector("#tableAlunos");
-    }
-
-    addTable(alunos: ListAlunos): void {
-        this._elemento.innerHTML = this.template(alunos);
-    }
+export class AlunoView extends View<ListAlunos> {
 
     template(alunos: ListAlunos): string {
         return `

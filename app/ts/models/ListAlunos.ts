@@ -1,4 +1,6 @@
-class ListAlunos {
+import { Aluno } from './moduleAluno';
+
+export class ListAlunos {
     //private _alunos: Aluno[] = [];
     private _alunos: Array<Aluno> = [];
 
